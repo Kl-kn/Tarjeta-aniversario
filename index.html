@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Aniversario</title> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Paso 1: Sobre inicial -->
+    <div id="sobre" class="sobre" onclick="abrirSobre()">
+        <p class="texto-sobre">K & K</p>
+        <p class="texto-sobre">Feliz primer aniversario, mi bomboncito</p>
+        <p class="fecha">22/11/2023</p>
+    </div>
+
+    <!-- Paso 2: Mini-juego -->
+    <div id="miniJuego" class="mini-juego" style="display: none;">
+        <p>Resuelve el mini-juego para continuar</p>
+        <button onclick="finalizarMiniJuego()">Terminar</button>
+    </div>
+
+    <!-- Paso 3: Preguntas interactivas -->
+    <div id="preguntas" class="preguntas" style="display: none;">
+        <div id="pregunta1" class="pregunta">
+            <p>¿Cuántos años cumplimos?</p>
+            <input type="number" id="respuesta1" placeholder="Escribe tu respuesta">
+            <button onclick="verificarRespuesta(1)">Responder</button>
+        </div>
+        <div id="pregunta2" class="pregunta" style="display: none;">
+            <p>¿En qué fecha fue nuestro primer aniversario?</p>
+            <input type="text" id="respuesta2" placeholder="Escribe tu respuesta">
+            <button onclick="verificarRespuesta(2)">Responder</button>
+        </div>
+        <div id="pregunta3" class="pregunta" style="display: none;">
+            <p>¿Qué apodo te he dado?</p>
+            <input type="text" id="respuesta3" placeholder="Escribe tu respuesta">
+            <button onclick="verificarRespuesta(3)">Responder</button>
+        </div>
+    </div>
+
+    <!-- Paso 4: Revelación de la tarjeta -->
+    <div id="tarjeta" class="tarjeta" style="display: none;">
+        <p class="mensaje-final">                                      ❤ Mi amada princesa ❤
+
+
+        
+            Hoy celebramos nuestro primer aniversario, un año lleno de momentos que guardaré siempre en mi corazón. Ha sido un año de aventuras, de sueños compartidos, de risas y amor verdadero. Desde el primer momento, supiste iluminar mi vida con tu dulzura, tu fuerza y esa sonrisa que hace que todo sea mejor. No hay un solo día en el que no agradezca tener a alguien tan especial como tú a mi lado.
+            
+            Quiero que sepas que cada paso de este camino contigo ha sido más de lo que alguna vez imaginé. Eres mi inspiración, mi apoyo y mi felicidad. Me haces sentir que, pase lo que pase, mientras estemos juntos, tenemos el mundo en nuestras manos.
+            
+            Hoy, te prometo seguir cuidándote, amándote y haciendo de cada día una nueva historia a tu lado. Gracias por ser mi princesa, mi compañera y mi amor. Feliz primer aniversario, mi bomboncito.
+            
+            Con todo mi amor,
+
+            ❤ Kevin ❤
+            
+            </p>
+        <button onclick="mostrarAgradecimiento()">Continuar</button>
+    </div>
+
+    <!-- Paso 5: Mensaje de agradecimiento -->
+    <div id="agradecimiento" class="agradecimiento" style="display: none;">
+        <p>⁠❤ Gracias por hacer de este año uno de los más especiales de mi vida. Cada día contigo ha sido una bendición y una aventura que no cambiaría por nada. Agradezco de corazón cada risa, cada mensaje, y cada momento que hemos compartido. Eres una persona maravillosa, y saber que compartimos este camino juntos me llena de felicidad.
+
+            Gracias por ser quien eres, por tu amor, por tu paciencia y por cada pequeño gesto que ilumina mis días. Te prometo que haré todo lo posible por seguir mereciendo tu amor y compañía. Hoy y siempre, gracias por ser mi todo.
+            
+            Con amor y gratitud,
+            Kevin ⁠❤</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

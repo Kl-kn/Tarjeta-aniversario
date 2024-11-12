@@ -1,0 +1,153 @@
+/* Importamos la fuente de lujo */ 
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos para el sobre */
+.sobre {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    color: #a1925a;
+    border: 3px solid #C5B358;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    animation: scaleEffect 0.5s ease-in-out;
+    transition: transform 0.3s ease; /* Para la animación al hacer hover */
+}
+
+/* Estilo para la línea decorativa solo en el sobre */
+.sobre::before {
+    content: "";
+    position: relative;
+    top: 15%;
+    width: 90%;
+    height: 2px;
+    background-color: #C5B358;
+}
+
+/* Agranda el sobre al pasar el cursor */
+.sobre:hover {
+    transform: scale(1.05);
+}
+
+.texto-sobre {
+    font-size: 2.5rem;
+    color: #a1925a;
+    margin: 5px 0;
+}
+
+.fecha {
+    font-size: 1.5rem;
+    color: #a1925a;
+    margin-top: 10px;
+}
+
+/* Estilos para las preguntas (con el cuadro blanco) */
+.preguntas {
+    position: relative;
+    width: 600px;
+    height: auto;
+    background-color: white;
+    color: #a1925a;
+    border: 3px solid #C5B358;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Estilos para el mensaje final (con el cuadro blanco) */
+.mensaje-final {
+    font-size: 2.5rem;
+    color: #a1925a;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border: 3px solid #C5B358;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Estilos para el agradecimiento (con el cuadro blanco) */
+.agradecimiento {
+    font-size: 2.5rem;
+    color:#a1925a;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 3px solid #C5B358;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Animación de apertura */
+@keyframes abrirSobre {
+    0% {
+        transform: scale(0.8) rotateX(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1) rotateX(20deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleEffect {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #C5B358;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Mueve el botón hacia abajo */
+}
+
+button:hover {
+    background-color: #d4af37;
+}
