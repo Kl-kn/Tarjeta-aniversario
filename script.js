@@ -1,7 +1,7 @@
 let respuestasCorrectas = {
     1: '1',
-    2: 'Las enchiladas',
-    3: 'Bomboncito'
+    2: 'las enchiladas',
+    3: 'bomboncito'
 };
 
 let respuestasContestadas = {
