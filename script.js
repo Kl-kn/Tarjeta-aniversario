@@ -1,7 +1,7 @@
 let respuestasCorrectas = {
     1: '1',
-    2: '22/11/2023',
-    3: 'bomboncito'
+    2: 'Quiero perderme contigo',
+    3: 'Bomboncito'
 };
 
 let respuestasContestadas = {
