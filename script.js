@@ -1,6 +1,6 @@
 let respuestasCorrectas = {
     1: '1',
-    2: 'Quiero perderme contigo',
+    2: 'Quiero Perderme Contigo',
     3: 'Bomboncito'
 };
 
