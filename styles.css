@@ -1,4 +1,4 @@
-/* Importamos la fuente de lujo */ 
+/* Importamos la fuente de lujo */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 body {
@@ -15,8 +15,9 @@ body {
 /* Estilos para el sobre */
 .sobre {
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 90vw;
+    max-width: 600px;
+    height: auto;
     background-color: black;
     color: #a1925a;
     border: 3px solid #C5B358;
@@ -27,14 +28,14 @@ body {
     justify-content: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     cursor: pointer;
     animation: scaleEffect 0.5s ease-in-out;
-    transition: transform 0.3s ease; /* Para la animación al hacer hover */
+    transition: transform 0.3s ease;
+    padding: 20px;
 }
 
-/* Estilo para la línea decorativa solo en el sobre */
 .sobre::before {
     content: "";
     position: relative;
@@ -44,28 +45,26 @@ body {
     background-color: #C5B358;
 }
 
-/* Agranda el sobre al pasar el cursor */
 .sobre:hover {
     transform: scale(1.05);
 }
 
 .texto-sobre {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #a1925a;
     margin: 5px 0;
 }
 
 .fecha {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #a1925a;
     margin-top: 10px;
 }
 
-/* Estilos para las preguntas (con el cuadro blanco) */
-.preguntas {
-    position: relative;
-    width: 600px;
-    height: auto;
+/* Estilos para las preguntas */
+.preguntas, .mensaje-final, .agradecimiento {
+    width: 90vw;
+    max-width: 600px;
     background-color: white;
     color: #a1925a;
     border: 3px solid #C5B358;
@@ -75,42 +74,57 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Great Vibes', cursive;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     margin-top: 20px;
     padding: 20px;
-}
-
-/* Estilos para el mensaje final (con el cuadro blanco) */
-.mensaje-final {
-    font-size: 2.5rem;
-    color: #a1925a;
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border: 3px solid #C5B358;
-    border-radius: 10px;
-    margin-top: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    font-family: 'Great Vibes', cursive;
 }
 
-/* Estilos para el agradecimiento (con el cuadro blanco) */
-.agradecimiento {
-    font-size: 2.5rem;
-    color:#a1925a;
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: white;
-    border: 3px solid #C5B358;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    font-family: 'Great Vibes', cursive;
+/* Estilo para el mensaje final y agradecimiento */
+.mensaje-final, .agradecimiento {
+    font-size: 1.8rem;
 }
 
-/* Animación de apertura */
+/* Botón */
+button {
+    background-color: #C5B358;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #d4af37;
+}
+
+/* Media Queries para ajustar en móviles */
+@media only screen and (max-width: 768px) {
+    .sobre, .preguntas, .mensaje-final, .agradecimiento {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .texto-sobre {
+        font-size: 1.8rem;
+    }
+
+    .fecha {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Animaciones */
 @keyframes abrirSobre {
     0% {
         transform: scale(0.8) rotateX(90deg);
@@ -133,21 +147,4 @@ body {
     to {
         transform: scale(1);
     }
-}
-
-/* Estilo para el botón */
-button {
-    background-color: #C5B358;
-    color: black;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px; /* Mueve el botón hacia abajo */
-}
-
-button:hover {
-    background-color: #d4af37;
 }
