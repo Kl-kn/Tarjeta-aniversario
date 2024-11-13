@@ -12,12 +12,11 @@ body {
     margin: 0;
 }
 
-/* Estilos para el sobre */
+/* Estilos para el sobre (tamaño original) */
 .sobre {
     position: relative;
-    width: 90vw;
-    max-width: 600px;
-    height: auto;
+    width: 600px; /* Mantiene el tamaño original */
+    height: 400px;
     background-color: black;
     color: #a1925a;
     border: 3px solid #C5B358;
@@ -28,7 +27,7 @@ body {
     justify-content: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     cursor: pointer;
     animation: scaleEffect 0.5s ease-in-out;
@@ -50,20 +49,20 @@ body {
 }
 
 .texto-sobre {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #a1925a;
     margin: 5px 0;
 }
 
 .fecha {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #a1925a;
     margin-top: 10px;
 }
 
-/* Estilos para las preguntas */
+/* Estilos para las preguntas, mensaje final y agradecimiento */
 .preguntas, .mensaje-final, .agradecimiento {
-    width: 90vw;
+    width: 90vw; /* Se adapta al ancho de la pantalla en móviles */
     max-width: 600px;
     background-color: white;
     color: #a1925a;
@@ -74,16 +73,16 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Great Vibes', cursive;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
     margin-top: 20px;
     padding: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para el mensaje final y agradecimiento */
+/* Estilos para el mensaje final y agradecimiento */
 .mensaje-final, .agradecimiento {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
 }
 
 /* Botón */
@@ -103,10 +102,10 @@ button:hover {
     background-color: #d4af37;
 }
 
-/* Media Queries para ajustar en móviles */
+/* Media Queries para ajustar en móviles (excluyendo el sobre) */
 @media only screen and (max-width: 768px) {
-    .sobre, .preguntas, .mensaje-final, .agradecimiento {
-        font-size: 1.5rem;
+    .preguntas, .mensaje-final, .agradecimiento {
+        font-size: 1.2rem;
         padding: 15px;
     }
 
